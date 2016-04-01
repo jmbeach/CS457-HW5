@@ -1,0 +1,11 @@
+{
+	"ImportPath": ".",
+	"GoVersion": "go1.6",
+	"Packages": [
+		"github.com/ricallinson/forgery",
+		"database/sql",
+		"github.com/elgs/gosqljson",
+		"github.com/mattn/go-sqlite3"
+	],
+	"Deps": []
+}
