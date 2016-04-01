@@ -1,1 +1,1 @@
-web: hw5
+web: web
