@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Alarm Events</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div ng-controller="event as event">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Event ID</th>
+              <th>Description</th>
+              <th>Event Date</th>
+              <th>Is Sent</th>
+              <th>Tag ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="e in allEvents">
+              <td>{{e.eventId}}</td>
+              <td>{{e.description}}</td>
+              <td>{{e.eventDate}}</td>
+              <td>{{e.isSent}}</td>
+              <td>{{e.tagId}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

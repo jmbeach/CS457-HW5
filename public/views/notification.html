@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Alarm Notifications</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div ng-controller="notification as notification">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Notification ID</th>
+              <th>Distribution Sequence</th>
+              <th>Message Type</th>
+              <th>Send To</th>
+              <th>Event ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="n in allNotifications">
+              <td>{{n.notificationId}}</td>
+              <td>{{n.distributionSequence}}</td>
+              <td>{{n.messageType}}</td>
+              <td>{{n.sendTo}}</td>
+              <td>{{n.eventId}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
