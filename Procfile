@@ -1,1 +1,1 @@
-web: make && go hw5
+web: hw5
