@@ -1,6 +1,6 @@
 all: go bower
 
-go: 
-	go build hw5.go
+go:
+	go build web.go
 bower:
 	bower install
