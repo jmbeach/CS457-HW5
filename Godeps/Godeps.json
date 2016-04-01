@@ -1,29 +1,11 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "CS457-HW5",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v60",
 	"Packages": [
-		"github.com/ricallinson/forgery",
-		"github.com/elgs/gosqljson",
-		"github.com/mattn/go-sqlite3"
+		"./..."
 	],
 	"Deps": [
-		{
-			"ImportPath": "github.com/ricallinson/forgery",
-			"Rev": "e5fdbec6311ca20a8860c4007b806b749f6b4891"
-		},
-		{
-			"ImportPath": "github.com/ricallinson/httputils",
-			"Rev": "f8740e04d1c731b44cf4ab02c6bd9c04c54830b2"
-		},
-		{
-			"ImportPath": "github.com/ricallinson/simplebdd",
-			"Rev": "24a3d92f9c0039fd562e62bc76a949734790b8c3"
-		},
-		{
-			"ImportPath": "github.com/ricallinson/stackr",
-			"Rev": "96077540c8dfc38f847cf8f325e3af864d1fbc5e"
-		},
 		{
 			"ImportPath": "github.com/elgs/gosqljson",
 			"Rev": "c4dcd160ef797a483e4910514ec053a0e2c01a7e"
@@ -37,6 +19,18 @@
 			"ImportPath": "github.com/mattn/go-sqlite3/sqlite3_test",
 			"Comment": "v1.1.0-51-g37aa7c6",
 			"Rev": "37aa7c6f5bc95b7264de70cd1f0ca1d39228ebd6"
+		},
+		{
+			"ImportPath": "github.com/ricallinson/forgery",
+			"Rev": "e5fdbec6311ca20a8860c4007b806b749f6b4891"
+		},
+		{
+			"ImportPath": "github.com/ricallinson/httputils",
+			"Rev": "f8740e04d1c731b44cf4ab02c6bd9c04c54830b2"
+		},
+		{
+			"ImportPath": "github.com/ricallinson/stackr",
+			"Rev": "96077540c8dfc38f847cf8f325e3af864d1fbc5e"
 		}
 	]
 }
