@@ -1,1 +1,1 @@
-web: cs457-hw5
+web: ./web
