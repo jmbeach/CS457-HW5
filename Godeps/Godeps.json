@@ -1,14 +1,11 @@
 {
-	"ImportPath": "CS457-HW5",
+	"ImportPath": "github.com/jmbeach/CS457-HW5",
 	"GoVersion": "go1.6",
-	"GodepVersion": "v60",
-	"Packages": [
-		"./..."
-	],
+	"GodepVersion": "v61",
 	"Deps": [
 		{
 			"ImportPath": "github.com/elgs/gosqljson",
-			"Rev": "c4dcd160ef797a483e4910514ec053a0e2c01a7e"
+			"Rev": "027aa4915315a0b2825c0f025cea347829b974fa"
 		},
 		{
 			"ImportPath": "github.com/mattn/go-sqlite3",
@@ -22,10 +19,6 @@
 		{
 			"ImportPath": "github.com/ricallinson/httputils",
 			"Rev": "f8740e04d1c731b44cf4ab02c6bd9c04c54830b2"
-		},
-		{
-			"ImportPath": "github.com/ricallinson/simplebdd",
-			"Rev": "24a3d92f9c0039fd562e62bc76a949734790b8c3"
 		},
 		{
 			"ImportPath": "github.com/ricallinson/stackr",
