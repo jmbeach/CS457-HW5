@@ -5,6 +5,8 @@ import (
 	"database/sql"
 	"github.com/elgs/gosqljson"
 	"fmt"
+	"strconv"
+	"os"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -61,7 +63,15 @@ func main() {
 				break;
 		}
 	})
-	app.Listen(3000);
+	var port int;
+	if (os.Getenv("PORT") == "") {
+		port = 3000
+	} else {
+		i, err := strconv.Atoi(os.Getenv("PORT"));
+		checkErr(err);
+		port = i
+	}
+	app.Listen(port);
 }
 
 func checkErr(err error) {
