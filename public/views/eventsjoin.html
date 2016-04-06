@@ -1,0 +1,63 @@
+<div class="container" ng-controller="eventjoin as eventjoin">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Alarm Events Join Notifications</h2>
+    </div>
+  </div>
+  <div class="row">
+    <p>
+      Filter type
+    </p>
+    <select id="type">
+      <option value ="ALL">
+        ALL
+      </option>
+      <option value="EMAIL">
+        EMAIL
+      </option>
+      <option value="TEXT">
+        TEXT
+      </option>
+    </select>
+    <script>
+    $("#type").on('change',function() {
+      setType(this.value);
+    });
+    </script>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div >
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Event ID</th>
+              <th>Description</th>
+              <th>Event Date</th>
+              <th>Is Sent</th>
+              <th>Tag ID</th>
+              <th>Notification ID</th>
+              <th>Distribution Sequence</th>
+              <th>Message Type</th>
+              <th>Send To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="e in all">
+              <td>{{e.event.eventId}}</td>
+              <td>{{e.event.description}}</td>
+              <td>{{e.event.eventDate}}</td>
+              <td>{{e.event.isSent}}</td>
+              <td>{{e.event.tagId}}</td>
+              <td>{{e.notification.notificationId}}</td>
+              <td>{{e.notification.distributionSequence}}</td>
+              <td>{{e.notification.messageType}}</td>
+              <td>{{e.notification.sendTo}}</td>
+              <td>{{e.notification.eventId}}</td
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

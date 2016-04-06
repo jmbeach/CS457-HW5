@@ -4,6 +4,7 @@
         [
             new Page("Alarm Events", "/", "")
             ,new Page("Alarm Notification", "/notification","/notification")
+            ,new Page("Events Join Notifications", "/eventsjoin","/eventsjoin")
         ];
 }
 

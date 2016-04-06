@@ -36,6 +36,18 @@ master.config(['$urlMatcherFactoryProvider', '$routeProvider', '$locationProvide
 
                 }
             })
+            .state(
+              "EventsJoin", {
+                  url: "/eventsjoin",
+                  views: {
+                      "master": {
+                          templateUrl: 'views/eventsjoin.html',
+                          controller: 'main',
+                          controllerAs: 'main'
+                      }
+
+                  }
+              })
           // #endregion
           // #region OTHER_STATE
         //.state(
@@ -83,4 +95,5 @@ master.controller('main', Main);
 master.controller('nav', Navbar);
 master.controller('event',AlarmEventController);
 master.controller('notification',AlarmNotificationController);
+master.controller('eventjoin',EventsJoinController);
 //#endregion

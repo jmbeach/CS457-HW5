@@ -14,7 +14,21 @@ func getEvents(db *sql.DB,req *f.Request,res *f.Response, next func()) {
 	fmt.Println(headers)
 	res.Send(data);
 }
-
+func getEventsJoinNotifications(db *sql.DB,req *f.Request,res *f.Response, next func()) {
+	caseStyle := "original"
+	fmt.Println(req.Query["type"]);
+	if req.Query["type"] != "" {
+		fmt.Println("not null");
+		headers ,data, _ := gosqljson.QueryDbToArray(db,caseStyle,"select * from alarmevent join alarmnotification on alarmnotification.eventid=alarmevent.eventid where alarmnotification.messageType = '"+req.Query["type"]+"'")
+		fmt.Println(headers)
+		res.Send(data);
+	} else {
+		fmt.Println("null");
+		headers ,data, _ := gosqljson.QueryDbToArray(db,caseStyle,"select * from alarmevent join alarmnotification on alarmnotification.eventid=alarmevent.eventid")
+		fmt.Println(headers)
+		res.Send(data);
+	}
+}
 func getNotifications(db *sql.DB,req *f.Request,res *f.Response, next func()) {
 	caseStyle := "original"
 	headers ,data, _ := gosqljson.QueryDbToArray(db,caseStyle,"SELECT * FROM AlarmNotification order by notificationid desc")
@@ -31,12 +45,15 @@ func main() {
 	app.Use(f.Static(map[string]string{"root/bower_components": "./bower_components"}))
 	app.Get("(/[a-zA-Z(%20)]*)+",func(req *f.Request,res *f.Response, next func()) {
 		fmt.Println(req.Url)
-		switch(req.Url) {
-			case "events":
+		switch(req.Path) {
+			case "/events":
 				getEvents(db,req,res,next);
 				break;
-			case "notifications":
+			case "/notifications":
 				getNotifications(db,req,res,next);
+				break;
+			case "/notificationjoin":
+				getEventsJoinNotifications(db,req,res,next);
 				break;
 			default:
 				fmt.Println("sending home page indirectly")
